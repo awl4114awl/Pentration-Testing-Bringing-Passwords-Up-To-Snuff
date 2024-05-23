@@ -31,6 +31,7 @@
 
     Our target is the AD-Server located at 172.16.30.55
     We will utilize the Security-Desk workstation located at 172.16.20.55
+<img src="https://i.imgur.com/Ms9L7zn.jpeg" height="80%" width="80%" alt="NICE Challenge"/>
 
 <h2>Actions Taken</h2>
 
