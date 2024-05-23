@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/ARGlAoP.png" height="100%" width="100%" alt="install kali"/>
+<img src="https://i.imgur.com/ARGlAoP.png" height="50%" width="50%" alt="install kali"/>
 </p>
 <h1>Pentration Testing: Bringing Passwords Up to Snuff</h1>
 
