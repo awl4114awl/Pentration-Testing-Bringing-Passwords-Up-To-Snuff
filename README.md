@@ -72,13 +72,10 @@
         - Apply changes.
     20. Repeat for the second user.
 
-<h2>Report</h2>
+<p align="center"><img src="https://i.imgur.com/WcwS8N4.png" height="80%" width="80%" alt="NICE Challenge"/>
 <br />
 <br />
-<img src="https://i.imgur.com/WcwS8N4.png" height="80%" width="80%" alt="NICE Challenge"/>
-<br />
-<br />
-<img src="https://i.imgur.com/LvN5xX3.png" height="80%" width="80%" alt="NICE Challenge"/>
+<p align="center"><img src="https://i.imgur.com/LvN5xX3.png" height="80%" width="80%" alt="NICE Challenge"/>
 <br />
 <br />
 </p>
