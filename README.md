@@ -3,17 +3,17 @@
 </p>
 <h1>Pentration Testing: Bringing Passwords Up to Snuff</h1>
 
-    We have reason to believe that some of our employees have weaker than should be acceptable passwords, so we want you to conduct authorized penetration testing against various company assets to determine which employees need to change their passwords.
+##### We have reason to believe that some of our employees have weaker than should be acceptable passwords, so we want you to conduct authorized penetration testing against various company assets to determine which employees need to change their passwords.
 
 <h2>Solution</h2>
 
-    Utilize Kali Linux to target Pretty Safe Electronic's Active Directory located at 171.16.30.55.
+- Utilize Kali Linux to target Pretty Safe Electronic's Active Directory located at 171.16.30.55.
 
     - Use Metasploit's Auxiliary module smblookupsid to enumerate authorized users in the directory.
     - Utilize Hydra, leveraging Metasploit's output, to target specific users in the directory.
     - Employ the "rockyou.txt" wordlist to identify weak passwords among users.
 
-    Reset passwords for identified users with weak passwords.
+- Reset passwords for identified users with weak passwords.
 
     - Access the domain controller and initiate password resets for users flagged with weak passwords.
 
@@ -28,8 +28,9 @@
 
 <h2>Network Map and targets used</h2>
 
-    Our target is the AD-Server located at 172.16.30.55
-    We will utilize the Security-Desk workstation located at 172.16.20.55
+##### Our target is the AD-Server located at 172.16.30.55
+##### We will utilize the Security-Desk workstation located at 172.16.20.55
+
 <img src="https://i.imgur.com/Ms9L7zn.jpeg" height="80%" width="80%" alt="NICE Challenge"/>
 
 <h2>Actions Taken</h2>
