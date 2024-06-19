@@ -3,7 +3,7 @@
 </p>
 <h1>Pentration Testing: Bringing Passwords Up to Snuff</h1>
 
-##### We have reason to believe that some of our employees have weaker than should be acceptable passwords, so we want you to conduct authorized penetration testing against various company assets to determine which employees need to change their passwords.
+We have reason to believe that some of our employees have weaker than should be acceptable passwords, so we want you to conduct authorized penetration testing against various company assets to determine which employees need to change their passwords.
 
 <h2>Solution</h2>
 
